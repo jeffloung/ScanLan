@@ -1,1 +1,6 @@
 E:\Project\VS\ScanLan\Scan\bin\Debug\Scan.exe.config
+E:\Project\VS\ScanLan\Scan\bin\Debug\Scan.exe
+E:\Project\VS\ScanLan\Scan\bin\Debug\Scan.pdb
+E:\Project\VS\ScanLan\Scan\obj\Debug\Scan.csprojResolveAssemblyReference.cache
+E:\Project\VS\ScanLan\Scan\obj\Debug\Scan.exe
+E:\Project\VS\ScanLan\Scan\obj\Debug\Scan.pdb

@@ -10,6 +10,10 @@ namespace Scan
     {
         static void Main(string[] args)
         {
+            LScan ls = new LScan();
+            ls.allowdebug = true;
+            ls.mode = ScanNetMode.NetAdapter;
+            ls.Init();
         }
     }
 }
