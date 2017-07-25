@@ -39,17 +39,26 @@ namespace Scan
             nics = NetworkInterface.GetAllNetworkInterfaces();
             foreach (NetworkInterface adapter in nics)
             {
-                Debug("type:" + adapter.NetworkInterfaceType);
+                //Debug("name:" + adapter.Name + ",type:" + adapter.NetworkInterfaceType);
 
-                //if (adapter.NetworkInterfaceType == NetworkInterfaceType.Wireless80211
-                //    || adapter.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
-                //{
-                //    Debug("name:" + adapter.Name);
-                //    IPInterfaceProperties ipIp = adapter.GetIPProperties();
-                //    Debug("ipIp:" + ipIp.UnicastAddresses[0].Address.ToString());
-                //    Debug("ipmask:" + ipIp.UnicastAddresses[0].IPv4Mask.ToString());
+                if (adapter.NetworkInterfaceType == NetworkInterfaceType.Wireless80211
+                    || adapter.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+                {
+                    Debug("name:" + adapter.Name);
+                    IPInterfaceProperties ipIp = adapter.GetIPProperties();
+                    foreach (UnicastIPAddressInformation ss in ipIp.UnicastAddresses)
+                    {
+                        Debug("ipip:" + ss.Address.ToString());
+                        Debug("ipmask:" + ss.IPv4Mask.ToString());
+                        //Debug("gate:" + ss.);
+                    }
+                    //Debug("ipIp:" + ipIp.UnicastAddresses[0].Address.ToString());
+                    //Debug("ipmask:" + ipIp.UnicastAddresses[0].IPv4Mask.ToString());
+                    //Debug("ipIp:" + ipIp.UnicastAddresses[1].Address.ToString());
+                    //Debug("ipIp:" + ipIp.UnicastAddresses[2].Address.ToString());
 
-                //}
+
+                }
             }
         }
 
